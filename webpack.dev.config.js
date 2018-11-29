@@ -22,6 +22,7 @@ module.exports = {
     publicPath: "/",
     filename: "[name].js"
   },
+  mode: "development",
   // !!! IMPORTANT !!!
   target: "web",
   devtool: "#source-map",
@@ -73,6 +74,7 @@ module.exports = {
       template: "./src/html/index.html",
       filename: "./index.html",
       excludeChunks: ["server"]
-    })
+    }),
+    new webpack.NoEmitOnErrorsPlugin()
   ]
 };
