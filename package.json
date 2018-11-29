@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Starter for express webpack dev and prod",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server.js"
+  },
+  "keywords": [
+    "Node.js",
+    "Express",
+    "webpack",
+    "development",
+    "production"
+  ],
+  "author": "Maciej Sypniewski",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
