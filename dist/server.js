@@ -81,20 +81,20 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./server.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/server/server.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./server.js":
-/*!*******************!*\
-  !*** ./server.js ***!
-  \*******************/
+/***/ "./src/server/server.js":
+/*!******************************!*\
+  !*** ./src/server/server.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _path = __webpack_require__(/*! path */ \"path\");\n\nvar _path2 = _interopRequireDefault(_path);\n\nvar _express = __webpack_require__(/*! express */ \"express\");\n\nvar _express2 = _interopRequireDefault(_express);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar app = (0, _express2.default)(),\n    DIST_DIR = __dirname,\n    HTML_FILE = _path2.default.join(DIST_DIR, \"index.html\");\n\napp.use(_express2.default.static(DIST_DIR));\n\napp.get(\"*\", function (req, res) {\n  res.sendFile(HTML_FILE);\n});\n\nvar PORT = process.env.PORT || 8080;\napp.listen(PORT, function () {\n  console.log(\"App listening to \" + PORT + \"...\");\n  console.log(\"Press Ctrl+C to quit.\");\n});\n\n//# sourceURL=webpack:///./server.js?");
+eval("\n\nvar _path = __webpack_require__(/*! path */ \"path\");\n\nvar _path2 = _interopRequireDefault(_path);\n\nvar _express = __webpack_require__(/*! express */ \"express\");\n\nvar _express2 = _interopRequireDefault(_express);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar app = (0, _express2.default)(),\n    DIST_DIR = __dirname,\n    HTML_FILE = _path2.default.join(DIST_DIR, \"index.html\");\n\napp.use(_express2.default.static(DIST_DIR));\n\napp.get(\"*\", function (req, res) {\n  res.sendFile(HTML_FILE);\n});\n\nvar PORT = process.env.PORT || 8080;\napp.listen(PORT, function () {\n  console.log(\"App listening to \" + PORT + \"...\");\n  console.log(\"Press Ctrl+C to quit.\");\n});\n\n//# sourceURL=webpack:///./src/server/server.js?");
 
 /***/ }),
 
