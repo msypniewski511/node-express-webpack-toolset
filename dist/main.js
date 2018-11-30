@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "a21b8a8d09a32474cfd2";
+/******/ 	var hotCurrentHash = "71e803a799008060569a";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -984,7 +984,7 @@ ansiHTML.reset()
 
 /***/ "./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js?!./src/scss/main.scss":
 /*!*********************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js??ref--6-2!./src/scss/main.scss ***!
+  !*** ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js??ref--7-2!./src/scss/main.scss ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -994,7 +994,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "body {\n  background-image: url(\"https://source.unsplash.com/random/1980x1200\");\n  background-position: center;\n  background-attachment: fixed;\n  background-size: cover; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n  font-family: helvetica;\n  color: #3e3e3e; }\n\n.description {\n  font-size: 14px;\n  color: #9e9e9e; }\n\na {\n  background: #3e3e3e;\n  color: #fff;\n  text-decoration: none;\n  padding: 5px;\n  border-radius: 10px; }\n\n.container {\n  width: 150px;\n  height: 50px;\n  background: #fff; }\n", ""]);
+exports.push([module.i, "body {\n  background-image: url(\"https://source.unsplash.com/random/1980x1200\");\n  background-position: center;\n  background-attachment: fixed;\n  background-size: cover; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n  font-family: helvetica;\n  color: #3e3e3e; }\n\n.description {\n  font-size: 14px;\n  color: #9e9e9e; }\n\na {\n  background: #3e3e3e;\n  color: #fff;\n  text-decoration: none;\n  padding: 5px;\n  border-radius: 10px; }\n\n.container {\n  width: 150px;\n  height: 50px;\n  background: yellow; }\n\nhr {\n  color: azure; }\n", ""]);
 
 // exports
 
@@ -3031,7 +3031,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var logMessage = function logMessage(msg) {
-  return console.log(msg);
+  console.log(msg);
+  alert("Hot Webpack Replacment works! " + msg);
 };
 exports.default = logMessage;
 
@@ -3045,7 +3046,7 @@ exports.default = logMessage;
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/sass-loader/lib/loader.js??ref--6-2!./main.scss */ "./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js?!./src/scss/main.scss");
+var content = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/sass-loader/lib/loader.js??ref--7-2!./main.scss */ "./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js?!./src/scss/main.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -3064,8 +3065,8 @@ var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyl
 if(content.locals) module.exports = content.locals;
 
 if(true) {
-	module.hot.accept(/*! !../../node_modules/css-loader!../../node_modules/sass-loader/lib/loader.js??ref--6-2!./main.scss */ "./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js?!./src/scss/main.scss", function() {
-		var newContent = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/sass-loader/lib/loader.js??ref--6-2!./main.scss */ "./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js?!./src/scss/main.scss");
+	module.hot.accept(/*! !../../node_modules/css-loader!../../node_modules/sass-loader/lib/loader.js??ref--7-2!./main.scss */ "./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js?!./src/scss/main.scss", function() {
+		var newContent = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/sass-loader/lib/loader.js??ref--7-2!./main.scss */ "./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js?!./src/scss/main.scss");
 
 		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
 

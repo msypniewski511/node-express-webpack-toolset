@@ -20,6 +20,7 @@ app.use(
 
 app.use(
   webpackHotMiddleware(compiler, {
+    hot: true,
     log: false,
     path: "/__webpack_hmr",
     heartbeat: 10 * 1000
