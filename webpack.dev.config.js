@@ -23,7 +23,9 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist"),
     publicPath: "/",
-    filename: "[name].js"
+    filename: "[name].js",
+    hotUpdateChunkFilename: ".hot/[id].[hash].hot-update.js",
+    hotUpdateMainFilename: ".hot/[hash].hot-update.json"
   },
   mode: "development",
   // !!! IMPORTANT !!!
