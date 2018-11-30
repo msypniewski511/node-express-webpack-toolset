@@ -15,7 +15,10 @@ const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
   entry: {
-    main: "./src/index.js"
+    main: [
+      "webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000",
+      "./src/index.js"
+    ]
   },
   output: {
     path: path.join(__dirname, "dist"),
@@ -42,7 +45,7 @@ module.exports = {
       {
         // Loads the javacript into html template provided.
         // Entry point is set below in HtmlWebPackPlugin in Plugins
-        test: /\.html$/,
+        test: /\.html$/i,
         use: [
           {
             loader: "html-loader"
@@ -55,7 +58,7 @@ module.exports = {
         use: [
           devMode ? "style-loader" : MiniCssExtractPlugin.loader,
           // { loader: "style-loader" },
-          { loader: "css-loader", options: { url: false, sourceMap: true } },
+          { loader: "css-loader" },
           { loader: "sass-loader", options: { sourceMap: true } }
         ]
       },
@@ -71,10 +74,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
+      stats: { children: false },
       template: "./src/html/index.html",
       filename: "./index.html",
+      // template: "./src/html/index.html",
       excludeChunks: ["server"]
     }),
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ]
 };
